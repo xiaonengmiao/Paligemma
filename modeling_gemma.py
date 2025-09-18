@@ -167,7 +167,7 @@ class GemmaRotaryEmbedding(nn.Module):
         self.inv_freq.to(x.device)
         # Copy the inv_freq tensor for batch in the sequence
         # inv_freq_expended: [Batch_Size, Head_Dim // 2, 1]
-        inv_freq_expended = self.inv_freq[None, :, None].float().expend(position_ids.shape[0], -1, 1)
+        inv_freq_expended = self.inv_freq[None, :, None].float().expand(position_ids.shape[0], -1, 1)
         # position_ids_expended: [Batch_Size, 1, Seq_Len]
         position_ids_expended = position_ids[:, None, :].float()
         device_type = x.device.type

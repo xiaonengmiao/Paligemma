@@ -1,0 +1,25 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "Python Debugger: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": ["--model_path", "/Users/haohan/Documents/ai/Paligemma/paligemma-3b-pt-224",
+                     "--prompt", "this building is ",
+                     "--image_file_path", "/Users/haohan/Library/CloudStorage/Dropbox/macscript/local/bin/ai/Paligemma/images.jpeg",
+                     "--max_tokens_to_generate", "100",
+                     "--temperature", "0.8",
+                     "--top_p", "0.9",
+                     "--do_sample", "False",
+                     "--only_cpu", "False",
+                    ]
+        }
+    ]
+}
